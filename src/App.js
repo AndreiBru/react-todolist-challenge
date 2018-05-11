@@ -16,7 +16,7 @@ export class App extends Component {
   }
 
   state = {
-    currentTodo: '',
+    currentTodo: ''
   };
 
   addTodo = () => {
@@ -25,13 +25,13 @@ export class App extends Component {
     postTodo(this.state.currentTodo);
 
     this.setState({
-      currentTodo: '',
+      currentTodo: ''
     });
   };
 
   updateCurrentTodo = todo => {
     this.setState({
-      currentTodo: todo,
+      currentTodo: todo
     });
   };
 

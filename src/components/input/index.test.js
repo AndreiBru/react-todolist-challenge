@@ -12,7 +12,7 @@ describe('Input', () => {
         value="name@gmail.com"
         placeholder="Your email address"
         className="one two"
-      />,
+      />
     );
 
     expect(comp.toJSON()).toMatchSnapshot();
@@ -27,7 +27,7 @@ describe('Input', () => {
         placeholder="Your email address"
         className="one two"
         onChange={onChangeSpy}
-      />,
+      />
     );
 
     const newValue = 'hey';

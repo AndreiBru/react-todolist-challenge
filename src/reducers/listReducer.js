@@ -5,17 +5,17 @@ import {
   DELETE_TODO,
   UPDATE_TODO,
   GET_TODOS,
-  ADD_TODO,
+  ADD_TODO
 } from '../actions/types';
 
-const initialState = {todos: [], errorMessage: null};
+const initialState = { todos: [], errorMessage: null };
 
 const ListReducer = (state = initialState, action) => {
   let newState;
 
   switch (action.type) {
     case GET_TODOS:
-      return {...state, todos: action.todos, todosSnapshot: action.todos};
+      return { ...state, todos: action.todos, todosSnapshot: action.todos };
 
     case ADD_TODO:
       newState = {
@@ -24,8 +24,8 @@ const ListReducer = (state = initialState, action) => {
         todosSnapshot: state.todos.slice(),
         todos: [
           ...state.todos,
-          {title: action.todo.title, url: action.todo.url},
-        ],
+          { title: action.todo.title, url: action.todo.url }
+        ]
       };
 
       return newState;
@@ -40,7 +40,7 @@ const ListReducer = (state = initialState, action) => {
             return false;
           }
           return true;
-        }),
+        })
       };
 
       return newState;
@@ -52,10 +52,10 @@ const ListReducer = (state = initialState, action) => {
         todosSnapshot: state.todos.slice(),
         todos: state.todos.map(todo => {
           if (todo.url === action.todo.url) {
-            return {...todo, completed: !todo.completed};
+            return { ...todo, completed: !todo.completed };
           }
           return todo;
-        }),
+        })
       };
 
       return newState;
@@ -68,18 +68,18 @@ const ListReducer = (state = initialState, action) => {
             return action.payload.newTodo;
           }
           return todo;
-        }),
+        })
       };
 
       return newState;
 
     case RESTORE_SNAPSHOT:
-      newState = {...state, todos: state.todosSnapshot.slice()};
+      newState = { ...state, todos: state.todosSnapshot.slice() };
 
       return newState;
 
     case DISPLAY_ERROR:
-      newState = {...state, errorMessage: action.errorMessage};
+      newState = { ...state, errorMessage: action.errorMessage };
 
       return newState;
 

@@ -10,7 +10,7 @@ describe('Button', () => {
   types.forEach(type => {
     it(`renders and matches snapshot for type=${type}`, () => {
       const comp = renderer.create(
-        <Button type={type}>Button type {type}</Button>,
+        <Button type={type}>Button type {type}</Button>
       );
 
       expect(comp.toJSON()).toMatchSnapshot();
@@ -22,7 +22,7 @@ describe('Button', () => {
     const comp = shallow(
       <Button type="edit" onClick={onClickSpy}>
         Click me
-      </Button>,
+      </Button>
     );
 
     expect(onClickSpy).not.toHaveBeenCalled();

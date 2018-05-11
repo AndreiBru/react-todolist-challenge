@@ -6,41 +6,41 @@ import {
   UPDATE_TODO,
   DELETE_TODO,
   ADD_TODO,
-  GET_TODOS,
+  GET_TODOS
 } from './types';
 
 const addTodo = todo => ({
   type: ADD_TODO,
-  todo,
+  todo
 });
 
 const getTodos = todos => ({
   type: GET_TODOS,
-  todos,
+  todos
 });
 
 const updateTodo = todo => ({
   type: UPDATE_TODO,
-  todo,
+  todo
 });
 
 const removeTodo = todo => ({
   type: DELETE_TODO,
-  todo,
+  todo
 });
 
 const fixTodo = payload => ({
   type: FIX_TODO,
-  payload,
+  payload
 });
 
 const restoreSnapshot = () => ({
-  type: RESTORE_SNAPSHOT,
+  type: RESTORE_SNAPSHOT
 });
 
 const displayError = errorMessage => ({
   type: DISPLAY_ERROR,
-  errorMessage,
+  errorMessage
 });
 
 export const postTodo = title => dispatch => {
@@ -48,14 +48,14 @@ export const postTodo = title => dispatch => {
   // ============================================================
   const url = new Date().getTime();
 
-  dispatch(addTodo({title, url}));
+  dispatch(addTodo({ title, url }));
 
   return axios
     .post('https://todo-backend-webpy.herokuapp.com/', {
-      title,
+      title
     })
     .then(res => {
-      dispatch(fixTodo({url, newTodo: res.data}));
+      dispatch(fixTodo({ url, newTodo: res.data }));
     })
     .catch(() => {
       dispatch(displayError('There was an error while adding your todo.'));
@@ -72,8 +72,8 @@ export const fetchTodos = () => dispatch => {
     .catch(() => {
       dispatch(
         displayError(
-          'There was an error while fetching your todos. Please try again later.',
-        ),
+          'There was an error while fetching your todos. Please try again later.'
+        )
       );
     });
 };
@@ -82,10 +82,10 @@ export const toggleTodoCompleted = todo => dispatch => {
   dispatch(updateTodo(todo));
   return axios
     .patch(todo.url, {
-      completed: !todo.completed,
+      completed: !todo.completed
     })
     .then(res => {
-      dispatch(fixTodo({url: todo.url, newTodo: res.data}));
+      dispatch(fixTodo({ url: todo.url, newTodo: res.data }));
     })
     .catch(() => {
       dispatch(displayError('There was an error while updating your todo.'));
