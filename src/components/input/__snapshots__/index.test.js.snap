@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input renders and matches snapshot 1`] = `
+<input
+  className="one two"
+  name="email"
+  onChange={[Function]}
+  placeholder="Your email address"
+  type="text"
+  value="name@gmail.com"
+/>
+`;

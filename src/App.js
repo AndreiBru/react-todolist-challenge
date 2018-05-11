@@ -1,6 +1,6 @@
-import React, {Component} from 'react';
-import {connect} from 'react-redux';
-import {fetchTodos, postTodo} from './actions/listActions';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { fetchTodos, postTodo } from './actions/listActions';
 
 import './App.css';
 
@@ -8,9 +8,9 @@ import List from './components/list';
 import Input from './components/input';
 import Button from './components/button';
 
-class App extends Component {
+export class App extends Component {
   componentDidMount() {
-    const {fetchTodos} = this.props;
+    const { fetchTodos } = this.props;
 
     fetchTodos();
   }
@@ -20,7 +20,7 @@ class App extends Component {
   };
 
   addTodo = () => {
-    const {postTodo} = this.props;
+    const { postTodo } = this.props;
 
     postTodo(this.state.currentTodo);
 
@@ -36,7 +36,7 @@ class App extends Component {
   };
 
   render() {
-    const {todos, errorMessage} = this.props;
+    const { todos, errorMessage } = this.props;
 
     return (
       <div className="container">
@@ -64,6 +64,6 @@ class App extends Component {
 
 const mapStateToProps = state => state.list;
 
-const mapDispatchToProps = {fetchTodos, postTodo};
+const mapDispatchToProps = { fetchTodos, postTodo };
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);

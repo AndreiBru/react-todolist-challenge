@@ -1,25 +1,25 @@
-import React, {Component} from 'react';
-import {connect} from 'react-redux';
-import {toggleTodoCompleted, deleteTodo} from '../../actions/listActions';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { toggleTodoCompleted, deleteTodo } from '../../actions/listActions';
 
 import './index.css';
 import Button from '../button';
 
-class List extends Component {
+export class List extends Component {
   deleteTodo = todo => {
-    const {deleteTodo} = this.props;
+    const { deleteTodo } = this.props;
 
     deleteTodo(todo);
   };
 
   toggleTodoCompleted = todo => {
-    const {toggleTodoCompleted} = this.props;
+    const { toggleTodoCompleted } = this.props;
 
     toggleTodoCompleted(todo);
   };
 
   render() {
-    const {todos} = this.props;
+    const { todos } = this.props;
 
     const renderTableRow = todo => (
       <tr key={todo.url}>
@@ -49,6 +49,6 @@ class List extends Component {
   }
 }
 
-const mapDispatchToProps = {toggleTodoCompleted, deleteTodo};
+const mapDispatchToProps = { toggleTodoCompleted, deleteTodo };
 
 export default connect(null, mapDispatchToProps)(List);

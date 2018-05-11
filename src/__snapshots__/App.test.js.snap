@@ -1,0 +1,153 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App renders and matches snapshot 1`] = `
+<div
+  className="container"
+>
+  <h1>
+    Todo List
+  </h1>
+  <div
+    className="add-item-to-list"
+  >
+    <input
+      className={undefined}
+      name="item"
+      onChange={[Function]}
+      placeholder="New Item..."
+      type="text"
+      value=""
+    />
+    <button
+      className="button add"
+      onClick={[Function]}
+    >
+      Add
+    </button>
+  </div>
+  <table>
+    <thead>
+      <tr>
+        <th
+          width="66%"
+        >
+          Item
+        </th>
+        <th>
+          Actions
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td
+          className={null}
+        >
+          one
+        </td>
+        <td>
+          <button
+            className="button edit"
+            onClick={[Function]}
+          >
+            Edit
+          </button>
+          <button
+            className="button delete"
+            onClick={[Function]}
+          >
+            Delete
+          </button>
+        </td>
+      </tr>
+      <tr>
+        <td
+          className="completed"
+        >
+          two
+        </td>
+        <td>
+          <button
+            className="button edit"
+            onClick={[Function]}
+          >
+            Edit
+          </button>
+          <button
+            className="button delete"
+            onClick={[Function]}
+          >
+            Delete
+          </button>
+        </td>
+      </tr>
+      <tr>
+        <td
+          className="completed"
+        >
+          three
+        </td>
+        <td>
+          <button
+            className="button edit"
+            onClick={[Function]}
+          >
+            Edit
+          </button>
+          <button
+            className="button delete"
+            onClick={[Function]}
+          >
+            Delete
+          </button>
+        </td>
+      </tr>
+      <tr>
+        <td
+          className={null}
+        >
+          four
+        </td>
+        <td>
+          <button
+            className="button edit"
+            onClick={[Function]}
+          >
+            Edit
+          </button>
+          <button
+            className="button delete"
+            onClick={[Function]}
+          >
+            Delete
+          </button>
+        </td>
+      </tr>
+      <tr>
+        <td
+          className={null}
+        >
+          five
+        </td>
+        <td>
+          <button
+            className="button edit"
+            onClick={[Function]}
+          >
+            Edit
+          </button>
+          <button
+            className="button delete"
+            onClick={[Function]}
+          >
+            Delete
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <div
+    className="error-message"
+  />
+</div>
+`;

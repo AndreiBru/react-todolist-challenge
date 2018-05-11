@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button renders and matches snapshot for type=add 1`] = `
+<button
+  className="button add"
+  onClick={undefined}
+>
+  Button type 
+  add
+</button>
+`;
+
+exports[`Button renders and matches snapshot for type=default 1`] = `
+<button
+  className="button default"
+  onClick={undefined}
+>
+  Button type 
+  default
+</button>
+`;
+
+exports[`Button renders and matches snapshot for type=edit 1`] = `
+<button
+  className="button edit"
+  onClick={undefined}
+>
+  Button type 
+  edit
+</button>
+`;
