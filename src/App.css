@@ -3,3 +3,14 @@
     margin: 0 auto;
     font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
 }
+
+.completed {
+  text-decoration: line-through;
+}
+
+.error-message {
+  text-align: center;
+  font-weight: bold;
+  margin-top: 20px;
+  color: tomato;
+}

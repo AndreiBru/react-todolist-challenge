@@ -1,7 +1,7 @@
-import { combineReducers } from "redux";
+import {combineReducers} from 'redux';
 
-import list from '../reducers/listReducer';
+import list from './listReducer';
 
 export default combineReducers({
-    list
+  list,
 });
