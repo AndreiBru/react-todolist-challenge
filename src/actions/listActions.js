@@ -58,7 +58,7 @@ export const postTodo = title => dispatch => {
       dispatch(fixTodo({url, newTodo: res.data}));
     })
     .catch(() => {
-      dispatch(displayError('There was an error while fetching your todos.'));
+      dispatch(displayError('There was an error while adding your todo.'));
       dispatch(restoreSnapshot());
     });
 };
